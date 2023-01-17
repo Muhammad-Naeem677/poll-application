@@ -19,3 +19,8 @@ Then added migration
 ```
 python manage.py migrate
 ```
+
+created superuser
+```
+python3 manage.py createsuperuser
+```
