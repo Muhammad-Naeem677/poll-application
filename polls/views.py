@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-# from django.template import loader
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
@@ -8,9 +7,7 @@ from .models import Choice, Question
 
 def index(request):
   latest_ques_list = Question.objects.order_by('-pub_date')[:5]
-  # template = loader.get_template('polls/index.html')
   context = {'latest_ques_list': latest_ques_list}
-  # return HttpResponse(template.render(context, request))
   return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):
