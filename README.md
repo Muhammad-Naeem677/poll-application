@@ -17,10 +17,15 @@ python3 manage.py makemigrations polls
 
 Then added migration
 ```
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 created superuser
 ```
 python3 manage.py createsuperuser
+```
+
+run tests of polls app using below command
+```
+python3 manage.py test polls
 ```
